@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beranda - Toko Bakery</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fdfbf7;
+            color: #3e2723;
+        }
+
+        .bakery-sidebar {
+            background-color: #ffffff;
+            box-shadow: 2px 0 12px rgba(0, 0, 0, 0.05);
+            width: 240px;
+        }
+
+        .bakery-header {
+            background: linear-gradient(135deg, #6d4c41, #4e342e);
+            color: #ffffff;
+        }
+
+        .menu-link {
+            border-radius: 8px;
+            margin: 6px 12px;
+            width: calc(100% - 24px) !important;
+        }
+
+        .menu-link:hover {
+            background-color: #efebe9 !important;
+            color: #4e342e !important;
+        }
+
+        .menu-active {
+            background-color: #6d4c41 !important;
+            color: #ffffff !important;
+            font-weight: 600;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .content-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+        }
+
+        .main-content {
+            margin-left: 240px;
+        }
+
+        @media (max-width: 992px) {
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left bakery-sidebar" id="mySidebar">
+        <div class="w3-container w3-padding-24">
+            <button onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-hide-large w3-right-align">×
+                Tutup</button>
+            <h3 class="w3-margin-0" style="font-weight: 600; color: #4e342e;">🥐 Toko Bakery</h3>
+            <p class="w3-small w3-text-grey w3-margin-0">Freshly Baked Everyday</p>
+        </div>
+        <a href="index.html" class="w3-bar-item w3-button menu-link">Halaman Utama</a>
+        <a href="beranda.html" class="w3-bar-item w3-button menu-link menu-active">Beranda</a>
+        <a href="profil-toko.html" class="w3-bar-item w3-button menu-link">Profil Toko</a>
+        <a href="produk-menu.html" class="w3-bar-item w3-button menu-link">Produk & Menu</a>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="main-content">
+        <header class="w3-container bakery-header w3-padding-16">
+            <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">☰</button>
+            <div class="w3-container">
+                <h2 style="font-weight: 600; margin: 4px 0;">Beranda Toko Bakery</h2>
+                <p class="w3-small w3-opacity" style="margin: 0;">Hangat dari oven langsung ke meja Anda setiap pagi</p>
+            </div>
+        </header>
+
+        <div class="w3-container w3-padding-24" style="max-width: 1000px; margin: auto;">
+            <img src="https://storage.googleapis.com/e-object-409003.firebasestorage.app/choco-bakery-history-y5e9ow6h.jpg"
+                alt="Toko Bakery" class="hero-img w3-margin-bottom">
+
+            <div class="content-card w3-margin-top">
+                <h3 style="font-weight: 600; color: #4e342e;">Kenikmatan Roti Artisan</h3>
+                <p class="w3-text-dark-grey">
+                    Kami menghadirkan berbagai pilihan roti, croissant, dan kue buatan tangan yang dipanggang setiap
+                    hari menggunakan bahan-bahan alami berkualitas tinggi tanpa bahan pengawet.
+                </p>
+                <div class="w3-margin-top">
+                    <a href="produk-menu.html" class="w3-button w3-round-large w3-margin-right"
+                        style="background-color: #6d4c41; color: white;">
+                        Lihat Produk & Menu →
+                    </a>
+                    <a href="profil-toko.html" class="w3-button w3-round-large w3-border"
+                        style="border-color: #6d4c41 !important; color: #6d4c41;">
+                        Profil Toko
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function w3_open() { document.getElementById("mySidebar").style.display = "block"; }
+        function w3_close() { document.getElementById("mySidebar").style.display = "none"; }
+    </script>
+</body>
+
+</html>

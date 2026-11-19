@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produk & Menu - Toko Bakery</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #fdfbf7;
+      color: #3e2723;
+    }
+
+    .bakery-sidebar {
+      background-color: #ffffff;
+      box-shadow: 2px 0 12px rgba(0, 0, 0, 0.05);
+      width: 240px;
+    }
+
+    .bakery-header {
+      background: linear-gradient(135deg, #6d4c41, #4e342e);
+      color: #ffffff;
+    }
+
+    .menu-link {
+      border-radius: 8px;
+      margin: 6px 12px;
+      width: calc(100% - 24px) !important;
+    }
+
+    .menu-link:hover {
+      background-color: #efebe9 !important;
+      color: #4e342e !important;
+    }
+
+    .menu-active {
+      background-color: #6d4c41 !important;
+      color: #ffffff !important;
+      font-weight: 600;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .price-tag {
+      color: #6d4c41;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .main-content {
+      margin-left: 240px;
+    }
+
+    @media (max-width: 992px) {
+      .main-content {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left bakery-sidebar" id="mySidebar">
+    <div class="w3-container w3-padding-24">
+      <button onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-hide-large w3-right-align">× Tutup</button>
+      <h3 class="w3-margin-0" style="font-weight: 600; color: #4e342e;">🥐 Toko Bakery</h3>
+      <p class="w3-small w3-text-grey w3-margin-0">Freshly Baked Everyday</p>
+    </div>
+    <a href="index.html" class="w3-bar-item w3-button menu-link">Halaman Utama</a>
+    <a href="beranda.html" class="w3-bar-item w3-button menu-link">Beranda</a>
+    <a href="profil-toko.html" class="w3-bar-item w3-button menu-link">Profil Toko</a>
+    <a href="produk-menu.html" class="w3-bar-item w3-button menu-link menu-active">Produk & Menu</a>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="main-content">
+    <header class="w3-container bakery-header w3-padding-16">
+      <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">☰</button>
+      <div class="w3-container">
+        <h2 style="font-weight: 600; margin: 4px 0;">Produk & Menu</h2>
+        <p class="w3-small w3-opacity" style="margin: 0;">Pilihan roti dan kue favorit pelanggan kami</p>
+      </div>
+    </header>
+
+    <div class="w3-container w3-padding-24" style="max-width: 1000px; margin: auto;">
+      <div class="w3-row-padding">
+
+        <div class="w3-third w3-margin-bottom">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80"
+              alt="Butter Croissant" class="product-img">
+            <div class="w3-container w3-padding-16">
+              <h4 style="font-weight: 600; margin: 0;">Butter Croissant</h4>
+              <p class="w3-small w3-text-grey">Renyah berlapis dengan mentega Prancis asli.</p>
+              <p class="price-tag">Rp 22.000</p>
+              <button onclick="pesan('Butter Croissant')" class="w3-button w3-block w3-round-large"
+                style="background-color: #6d4c41; color: white;">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third w3-margin-bottom">
+          <div class="product-card">
+            <img src="img/rotiaja.jpg" alt="Sourdough Bread" class="product-img">
+            <div class="w3-container w3-padding-16">
+              <h4 style="font-weight: 600; margin: 0;">Sourdough Bread</h4>
+              <p class="w3-small w3-text-grey">Fermentasi alami 24 jam, lembut & sehat.</p>
+              <p class="price-tag">Rp 38.000</p>
+              <button onclick="pesan('Sourdough Bread')" class="w3-button w3-block w3-round-large"
+                style="background-color: #6d4c41; color: white;">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third w3-margin-bottom">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=600&q=80"
+              alt="Cinnamon Roll" class="product-img">
+            <div class="w3-container w3-padding-16">
+              <h4 style="font-weight: 600; margin: 0;">Cinnamon Roll</h4>
+              <p class="w3-small w3-text-grey">Gulungan kayu manis hangat dengan glaze lembut.</p>
+              <p class="price-tag">Rp 25.000</p>
+              <button onclick="pesan('Cinnamon Roll')" class="w3-button w3-block w3-round-large"
+                style="background-color: #6d4c41; color: white;">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third w3-margin-bottom">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=80"
+              alt="Choco Brioche" class="product-img">
+            <div class="w3-container w3-padding-16">
+              <h4 style="font-weight: 600; margin: 0;">Choco Brioche</h4>
+              <p class="w3-small w3-text-grey">Roti manis lembut dengan isian cokelat lumer.</p>
+              <p class="price-tag">Rp 24.000</p>
+              <button onclick="pesan('Choco Brioche')" class="w3-button w3-block w3-round-large"
+                style="background-color: #6d4c41; color: white;">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third w3-margin-bottom">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"
+              alt="Dark Choco Cake" class="product-img">
+            <div class="w3-container w3-padding-16">
+              <h4 style="font-weight: 600; margin: 0;">Dark Choco Cake</h4>
+              <p class="w3-small w3-text-grey">Potongan kue cokelat pekat yang moist.</p>
+              <p class="price-tag">Rp 32.000</p>
+              <button onclick="pesan('Dark Choco Cake')" class="w3-button w3-block w3-round-large"
+                style="background-color: #6d4c41; color: white;">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-third w3-margin-bottom">
+          <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80"
+              alt="Classic Baguette" class="product-img">
+            <div class="w3-container w3-padding-16">
+              <h4 style="font-weight: 600; margin: 0;">Classic Baguette</h4>
+              <p class="w3-small w3-text-grey">Roti panjang khas Prancis berkulit renyah.</p>
+              <p class="price-tag">Rp 20.000</p>
+              <button onclick="pesan('Classic Baguette')" class="w3-button w3-block w3-round-large"
+                style="background-color: #6d4c41; color: white;">Pesan</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function w3_open() { document.getElementById("mySidebar").style.display = "block"; }
+    function w3_close() { document.getElementById("mySidebar").style.display = "none"; }
+    function pesan(namaProduk) {
+      alert("Terima kasih! Anda memilih: " + namaProduk);
+    }
+  </script>
+</body>
+
+</html>
